@@ -19,6 +19,14 @@
 .reservas__container  button {
     border: 0;
     background: #fff;
+    transition: filter 0.2s;
+    
+}
+
+
+.reservas__container  button svg:hover {
+  filter: brightness(0.9);
+  fill: red;
 }
 
 footer button {
