@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 10px;
+  
+}
+
+img {
+    max-width: 20%;
+    max-height: 20%
+}
+
+.header__reserva {
+    display:flex;
+    
+    align-items: center;
+    text-decoration: none;
+}
+
+.header__reserva div {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.header__reserva span{
+    color: #ddd;
+    font-size: 1rem;
+}

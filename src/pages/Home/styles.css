@@ -1,0 +1,45 @@
+.home__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  list-style: none;
+}
+
+.home__container li {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 4px;
+  padding: 2rem;
+}
+
+.home__container img {
+  max-width: 15rem;
+  max-height: 15rem;
+  border-radius: 4px;
+}
+
+.home__container strong {
+  font-size: 1rem;
+  line-height: 20px;
+  color: #191919;
+  margin-top: 10px;
+}
+
+.home__container button {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #191919;
+  border-radius: 4px;
+  border: 0;
+}
+
+.home__container button div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;;
+}
