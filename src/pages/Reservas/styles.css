@@ -38,3 +38,17 @@ footer button {
     margin-top: 10px;
     font-weight: bold;
 }
+
+.reservas__container_amount {
+  display: flex;
+  align-items: center;
+}
+
+.reservas__container_amount input {
+  border: 1px solid #eee;
+  border-radius: 4px;
+  color: #242424;
+  padding: 5px;
+  max-width: 30px;
+  text-align: center;
+}
