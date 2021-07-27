@@ -1,7 +1,6 @@
 import produce from "immer";
 
 export default function reserve(state = [], action) {
-  console.log(state);
   switch (action.type) {
     case "ADD_RESERVE":
       return produce(state, (draft) => {
@@ -15,6 +14,15 @@ export default function reserve(state = [], action) {
           });
         }
       });
+
+    case "REMOVE_RESERVE":
+      return produce(state, (draft) => {
+        const tripId = draft.findIndex((trip) => trip.id === action.id);
+        if (tripId >= 0) {
+          draft.splice(tripId, 1);
+        }
+      });
+
     default:
       return state;
   }
