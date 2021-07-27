@@ -39,7 +39,6 @@ function Home() {
           </button>
         </li>
       ))}
-      <h1>Home</h1>
     </div>
   );
 }
