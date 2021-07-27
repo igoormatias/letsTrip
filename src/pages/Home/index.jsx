@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { MdFlightTakeoff } from "react-icons/md";
 
+import { handleAddReserve } from "../../store/modules/reserve/action";
+
 import api from "../../services/api";
 import "./styles.css";
 
@@ -17,11 +19,8 @@ function Home() {
     loadApi();
   }, []);
 
-  function handleAddReserve(trip) {
-    dispatch({
-      type: "ADD_RESERVE",
-      trip,
-    });
+  function handleAdd(trip) {
+    dispatch(handleAddReserve(trip));
   }
   return (
     <div className="home__container">
@@ -30,7 +29,7 @@ function Home() {
           <img src={trip.image} alt={trip.title} />
           <strong>{trip.title}</strong>
           <span>Status: {trip.status ? "Disponível" : "Indisponível"}</span>
-          <button onClick={() => handleAddReserve(trip)} type="button">
+          <button onClick={() => handleAdd(trip)} type="button">
             <div>
               <MdFlightTakeoff size={16} color="#FFFF" />
             </div>
