@@ -18,9 +18,19 @@ export function handleRemoveReserve(id) {
   };
 }
 
-export function handleUpdateAmount(id, amount) {
+// ouvida pelo redux saga
+export function UpdateAmountRequest(id, amount) {
   return {
-    type: "UPDATE_AMOUNT",
+    type: "UPDATE_RESERVE_REQUEST",
+    id,
+    amount,
+  }
+}
+
+// ouvida pela reducer
+export function updateAmountSuccess(id, amount) {
+  return {
+    type: "UPDATE_RESERVE_SUCCESS",
     id,
     amount,
   }
