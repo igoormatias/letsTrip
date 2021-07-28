@@ -31,7 +31,7 @@ export default function Reservas() {
     <div>
       <h1 id="title">Você solicitou {reserve.length} reservas</h1>
 
-      {reserve.length > 0 &&
+      {
         reserve.map((trip) => (
           <div className="reservas__container" key={trip.id}>
             <img src={trip.image} alt={trip.title} />
